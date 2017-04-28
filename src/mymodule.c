@@ -29,10 +29,10 @@ static PyMethodDef methods[] = {
 PyMODINIT_FUNC initmymodule(void)
 {
 	PyObject *m;
-    	static PyObject *error; // handle the expections
+    static PyObject *error; // handle the expections
     
-    	m = Py_InitModule("mymodule", methods);
-    	if (!m) return;
+    m = Py_InitModule("mymodule", methods);
+    if (!m) return;
 
 	error = PyErr_NewException("mymodule.error", NULL, NULL);
 	Py_INCREF(error);

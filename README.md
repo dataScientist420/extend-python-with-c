@@ -1,4 +1,4 @@
-# extend-python-with-c
+# Extend Python With C
 Example of a program written in C which adds a new built-in module to Python.
 
 - unzip the repository folder

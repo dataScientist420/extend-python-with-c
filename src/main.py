@@ -21,8 +21,8 @@ import testmodule
 # Entry Point
 if __name__ == '__main__':
 	max_val = 20
-	num = testmodule.get_int("Enter an integer (max = %d): " % max_val, max_val)
+	val = testmodule.get_int("Enter an integer (max = %d): " % max_val, max_val)
 	
-	print('fibonacci(%d): %d' % (num, testmodule.fibonacci(num)))
-	print('factorial(%d): %d' % (num, testmodule.factorial(num)))
-	print('digits_sum(%d): %d' % (num, testmodule.digits_sum(num)))
+	print('fibonacci(%d): %d' % (val, testmodule.fibonacci(val)))
+	print('factorial(%d): %d' % (val, testmodule.factorial(val)))
+	print('digits_sum(%d): %d' % (val, testmodule.digits_sum(val)))

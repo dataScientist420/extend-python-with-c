@@ -17,7 +17,7 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
  @file: testmodule.c
- @description: This file implements an extension module to Python.                                               
+ @description: This file implements a new extension module for Python 3.                                               
  @author: Victor Neville                                                                                              
  @date:  31/5/2014                                                                                                                                                                                             
 ******************************************************************************/

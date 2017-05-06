@@ -1,6 +1,5 @@
 #!/bin/env python
 
-#  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
 #  the Free Software Foundation, either version 3 of the License, or
@@ -12,24 +11,18 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#  File:   main.py                                                                                                           
-#  Author: Victor Neville                                                                                              
-#  Date:  31/5/2014                                                                                                                                                                                             
-#  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
+#  @file:   main.py
+#  @description: This file tests the extension module "testmodule.c".                                                                                                           
+#  @author: Victor Neville                                                                                              
+#  @date:  31/5/2014                                                                                                                                                                                             
 
-import mymodule
-import os
+import testmodule
 
-def getInput(number=None):
-    while True:
-        if number == 1:
-        	val = raw_input('Enter the first number: ')
-        	if val.isdigit(): return int(val)
-        elif number == 2:
-        	val = raw_input('Enter the second number: ')
-        	if val.isdigit(): return int(val)
-        else: return None        
-
+# Entry Point
 if __name__ == '__main__':
-    os.system('clear')     
-    print 'add result: '+str(mymodule.add(getInput(number=1), getInput(number=2))) 
+	max_val = 20
+	num = testmodule.get_int("Enter an integer (max = %d): " % max_val, max_val)
+	
+	print('fibonacci(%d): %d' % (num, testmodule.fibonacci(num)))
+	print('factorial(%d): %d' % (num, testmodule.factorial(num)))
+	print('digits_sum(%d): %d' % (num, testmodule.digits_sum(num)))
